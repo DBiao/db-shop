@@ -1,0 +1,32 @@
+server:
+  shutdown: graceful
+spring:
+  profiles:
+    active: local
+  application:
+    name: clip2-console
+  cloud:
+    nacos:
+      config:
+        prefix:
+        file-extension: yml
+        shared-configs:
+          - data-id: share-config.yml
+apiside:
+  apisign:
+#    excludePaths: /doc.html;/favicon.ico;/webjars/**;/swagger-resources;/v2/api-docs;
+    excludePaths: /**
+    simpleAppSecretProvider:
+      appSecret: 123456
+
+#excel导入模板下载地址
+download:
+  file:
+    #https://file-dev.zdu56.com/console/1104878613461_75c0e7b1cf4b49f2bea550dc4af97982.xls
+    excelUrl: "https://file2.zdu56.com/template/%E8%B5%84%E9%87%91%E6%B5%81%E6%B0%B4%E5%8D%95%E6%A8%A1%E6%9D%BF-20220719112941.xls"
+feign:
+  client:
+    config:
+      commonSpi:
+        connectTimeout: 60000
+        readTimeout: 60000

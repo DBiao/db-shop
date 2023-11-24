@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<groupId>com.db</groupId>
+	<artifactId>db-shop</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>db-shop</name>
+	<description>电商项目</description>
+    <modules>
+        <module>db-shop-commons</module>
+		<module>db-shop-api</module>
+		<module>db-shop-api/db-shop-api-web</module>
+        <module>db-shop-api/db-shop-api-xcx</module>
+		<module>db-shop-api/db-shop-api-mobile</module>
+		<module>db-shop-auth</module>
+		<module>db-shop-commons</module>
+		<module>db-shop-auth/db-shop-auth-service</module>
+		<module>db-shop-auth/db-shop-auth-spi</module>
+		<module>db-shop-auth/db-shop-support</module>
+		<module>db-shop-base</module>
+		<module>db-shop-base/db-shop-base-spi</module>
+		<module>db-shop-base/db-shop-base-service</module>
+        <module>db-shop-basic</module>
+		<module>db-shop-basic/db-shop-basic-service</module>
+		<module>db-shop-basic/db-shop-basic-spi</module>
+	</modules>
+    <modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.4.RELEASE</version>
+	</parent>
+
+	<properties>
+
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+
+	</repositories>
+
+</project>
