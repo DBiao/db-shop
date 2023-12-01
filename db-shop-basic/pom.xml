@@ -8,10 +8,15 @@
     </parent>
 
     <artifactId>db-shop-basic</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>db-shop-basic</name>
     <url>http://maven.apache.org</url>
+
+    <modules>
+        <module>db-shop-basic-service</module>
+        <module>db-shop-basic-spi</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

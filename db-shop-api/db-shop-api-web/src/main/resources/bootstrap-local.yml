@@ -1,5 +1,5 @@
 server:
-  port: 18813
+  port: 10888
   tomcat:
     uri-encoding: "UTF-8"
   servlet:
@@ -8,52 +8,4 @@ server:
       force: true
       charset: "UTF-8"
 
-spring:
-  sleuth:
-    sampler:
-      probability: 1.0
-  zipkin:
-    base-url: "http://192.168.1.213:9411"
-    enabled: false
-  cloud:
-    nacos:
-      username: nacos
-      password: nacos
-      config:
-        server-addr: "192.168.1.212:8848"
-        namespace: "clip2-wwt"
-      discovery:
-        server-addr: "192.168.1.212:8848"
-        namespace: "${spring.cloud.nacos.config.namespace}"
-        heart-beat-timeout: 100000
-  jackson:
-    date-format: "yyyy-MM-dd HH:mm:ss"
-    time-zone: "GMT+8"
-    default-property-inclusion: always
-  redis:
-    cluster:
-      nodes: "192.168.1.211:7000,192.168.1.211:7001,192.168.1.211:7002,192.168.1.211:7003,192.168.1.211:7004,192.168.1.211:7005"
-      max-redirects: 3
-    password: "2v2kEVE1"
-    timeout: 6000
-    lettuce:
-      pool:
-        max-active: 100
-        min-idle: 8
-        max-idle: 8
-        max-wait: 10000
-        time-between-eviction-runs: 1000
-  # 设置导入的文档大小
-  servlet:
-    multipart:
-      # 最大支持文件大小
-      max-file-size: 1024MB
-      # 最大支持请求大小
-      max-request-size: 1024MB
-knife4j:
-  enable: true
-
-ribbon:
-  ReadTimeout: 60000
-  ConnectTimeout: 60000
 

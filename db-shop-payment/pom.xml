@@ -7,15 +7,14 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>db-shop-base</artifactId>
+    <artifactId>db-shop-payment</artifactId>
     <packaging>pom</packaging>
 
-    <name>db-shop-base</name>
+    <name>db-shop-payment</name>
     <url>http://maven.apache.org</url>
-
     <modules>
-        <module>db-shop-base-service</module>
-        <module>db-shop-base-spi</module>
+        <module>db-shop-payment-service</module>
+        <module>db-shop-payment-spi</module>
     </modules>
 
     <properties>

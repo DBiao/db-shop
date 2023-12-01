@@ -10,20 +10,12 @@
     <modules>
         <module>db-shop-commons</module>
 		<module>db-shop-api</module>
-		<module>db-shop-api/db-shop-api-web</module>
-        <module>db-shop-api/db-shop-api-xcx</module>
-		<module>db-shop-api/db-shop-api-mobile</module>
 		<module>db-shop-auth</module>
 		<module>db-shop-commons</module>
-		<module>db-shop-auth/db-shop-auth-service</module>
-		<module>db-shop-auth/db-shop-auth-spi</module>
-		<module>db-shop-auth/db-shop-support</module>
 		<module>db-shop-base</module>
-		<module>db-shop-base/db-shop-base-spi</module>
-		<module>db-shop-base/db-shop-base-service</module>
         <module>db-shop-basic</module>
-		<module>db-shop-basic/db-shop-basic-service</module>
-		<module>db-shop-basic/db-shop-basic-spi</module>
+        <module>db-shop-finance</module>
+		<module>db-shop-payment</module>
 	</modules>
     <modelVersion>4.0.0</modelVersion>
 
@@ -43,7 +35,115 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-dependencies</artifactId>
+			<version>Dalston.SR1</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- DAO相关操作 Start-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.21</version>
+		</dependency>
+		<!-- Mybatis -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>1.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>1.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-autoconfigure</artifactId>
+			<version>1.3.0</version>
+		</dependency>
+		<!-- 通用分页 -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper-spring-boot-starter</artifactId>
+			<version>1.1.3</version>
+		</dependency>
+		<!-- 连接池 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		<!-- DAO相关操作 END-->
+
+		<!-- Tools -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.3.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.9</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.7</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.38</version>
+		</dependency>
+
+		<!-- HttpClien -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.3.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>4.3.3</version>
+		</dependency>
 	</dependencies>
+
+	<!--构建工具-->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<finalName>${project.artifactId}</finalName>
+					<outputDirectory>../package</outputDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 	<repositories>
 

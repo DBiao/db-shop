@@ -3,20 +3,15 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.db</groupId>
-        <artifactId>db-shop</artifactId>
+        <artifactId>db-shop-payment</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>db-shop-base</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>db-shop-payment-spi</artifactId>
+    <packaging>jar</packaging>
 
-    <name>db-shop-base</name>
+    <name>db-shop-payment-spi</name>
     <url>http://maven.apache.org</url>
-
-    <modules>
-        <module>db-shop-base-service</module>
-        <module>db-shop-base-spi</module>
-    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

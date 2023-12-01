@@ -5,18 +5,14 @@
         <groupId>com.db</groupId>
         <artifactId>db-shop</artifactId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>db-shop-base</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>db-shop-finance-service</artifactId>
+    <packaging>jar</packaging>
 
-    <name>db-shop-base</name>
+    <name>db-shop-finance-service</name>
     <url>http://maven.apache.org</url>
-
-    <modules>
-        <module>db-shop-base-service</module>
-        <module>db-shop-base-spi</module>
-    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

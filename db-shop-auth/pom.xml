@@ -8,10 +8,16 @@
     </parent>
 
     <artifactId>db-shop-auth</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>db-shop-auth</name>
     <url>http://maven.apache.org</url>
+
+    <modules>
+        <module>db-shop-auth-service</module>
+        <module>db-shop-auth-spi</module>
+        <module>db-shop-auth-support</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

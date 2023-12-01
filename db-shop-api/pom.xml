@@ -8,10 +8,16 @@
     </parent>
 
     <artifactId>db-shop-api</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>db-shop-api</name>
     <url>http://maven.apache.org</url>
+
+    <modules>
+        <module>db-shop-api-mobile</module>
+        <module>db-shop-api-web</module>
+        <module>db-shop-api-xcx</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

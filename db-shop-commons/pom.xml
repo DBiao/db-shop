@@ -8,7 +8,7 @@
     </parent>
 
     <artifactId>db-shop-commons</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>db-shop-commons</name>
     <url>http://maven.apache.org</url>
