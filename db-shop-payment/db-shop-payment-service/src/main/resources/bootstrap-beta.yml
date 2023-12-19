@@ -1,6 +1,0 @@
-spring:
-  cloud:
-    nacos:
-      config:
-        server-addr: "10.206.0.8:8848"
-        namespace: "clip2-${spring.profiles.active:}"

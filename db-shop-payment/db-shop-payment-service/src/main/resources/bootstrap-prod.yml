@@ -1,11 +1,11 @@
 spring:
   cloud:
     nacos:
-      username: zdu56
-      password: l96pHBEI05eqKDDN
+      username:
+      password:
       config:
-        server-addr: "172.18.203.211:8848"
-        namespace: "clip2-${spring.profiles.active:}"
+        server-addr: ""
+        namespace: ""
 logging:
   file:
     path: "./logs/"
